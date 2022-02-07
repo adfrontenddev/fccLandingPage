@@ -1,0 +1,272 @@
+/*----------------
+Reset
+-----------------*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+   box-sizing: border-box;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+   padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+   margin: 0;
+}
+
+/* Set core body defaults */
+body {
+   min-height: 100vh;
+   scroll-behavior: smooth;
+   text-rendering: optimizeSpeed;
+   line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+   list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+   text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+   max-width: 100%;
+   display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+   margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+   font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+   * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+   }
+}
+
+/*----------------
+Main Styles
+-----------------*/
+body {
+   font-family: 'Roboto', sans-serif;
+   font-weight: 100;
+   font-size: 1.25em;
+   line-height: 1.5em;
+   background-color: #fff7da;
+}
+
+h1,
+h2,
+h3 {
+   font-family: 'Titan One', cursive;
+   margin-bottom: 1.5rem;
+   line-height: normal;
+}
+
+h1 {
+   font-size: 3em;
+}
+h2 {
+   font-size: 2em;
+}
+h3 {
+   font-size: 1.5em;
+}
+
+.display-flex {
+   display: flex;
+}
+
+#header {
+   position: fixed;
+   top: 0;
+   z-index: 200;
+   flex-direction: row;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+   height: 134px;
+   padding: 1rem;
+   background-color: #fff;
+}
+
+#header-img {
+   width: 100px;
+   height: 100px;
+}
+
+.nav-list {
+   width: 250px;
+   justify-content: space-between;
+}
+
+.nav-link {
+   text-decoration: none;
+   font-weight: 400;
+   color: #ab1946;
+}
+
+.hero {
+   justify-content: center;
+   width: 100%;
+   height: 50vh;
+   position: relative;
+   margin-top: 135px;
+   background: url(images/small-screen.png);
+   background-position: center;
+   background-size: cover;
+   color: #fff;
+}
+
+.hero-content {
+   margin-top: 0.5rem;
+   text-align: center;
+   font-size: 1.5rem;
+}
+
+.hero-content h1 span {
+   display: block;
+}
+
+.cta-btn {
+   padding: 0.5rem 1rem;
+   border-radius: 1rem;
+   background-color: #ecdb77;
+   border: none;
+   font-weight: 400;
+   text-transform: uppercase;
+   cursor: pointer;
+   transition: transform 0.5s;
+}
+
+.cta-btn a:link {
+   text-decoration: none;
+   color: black;
+}
+
+.cta-btn a:visited {
+   color: black;
+}
+
+.cta-btn:hover {
+   background-color: #eecb06;
+   transform: scale(1.15);
+}
+
+@media screen and (min-width: 750px) {
+   .hero {
+      justify-content: left;
+      align-items: center;
+      background: url(images/large-screen.png);
+      background-size: cover;
+      background-position: center right;
+      color: #fff;
+   }
+
+   .hero-content {
+      text-align: left;
+      margin-left: 1em;
+      font-size: 2.5rem;
+   }
+}
+
+@media screen and (min-width: 1200px) {
+   .hero-content {
+      margin-left: 3em;
+      font-size: 2.75rem;
+   }
+}
+
+.container {
+   margin: 0 auto;
+   width: 90%;
+   max-width: 1000px;
+   padding-top: 2rem;
+}
+
+.description {
+   margin-bottom: 1rem;
+}
+
+.video-content {
+   min-height: 40vh;
+}
+
+#form {
+   flex-direction: column;
+}
+.input-field {
+   margin-bottom: 1rem;
+}
+
+.content {
+   margin-top: 2rem;
+   height: auto;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+.pricing-box {
+   width: 300px;
+   height: 300px;
+   border: 1px solid black;
+   margin-bottom: 1rem;
+   padding: 1rem;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+   border-radius: 1rem;
+   background-color: #fff;
+}
+
+.price-head,
+.price {
+   font-family: 'Titan One', cursive;
+   font-size: 2rem;
+   color: #ab1946;
+   text-align: center;
+}
+
+@media screen and (min-width: 1040px) {
+   .content {
+      flex-direction: row;
+      justify-content: space-around;
+   }
+}
